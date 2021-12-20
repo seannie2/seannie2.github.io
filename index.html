@@ -14259,7 +14259,7 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Sean Dwyer 116567961 CMSC320 Final Project</p>
+<h1 id="H1-Super-Smash-Bros.-Melee-Replays-Analysis">H1 Super Smash Bros. Melee Replays Analysis<a class="anchor-link" href="#H1-Super-Smash-Bros.-Melee-Replays-Analysis">&#182;</a></h1><h3 id="H3-Sean-Dwyer-116567961-CMSC320-Final-Project">H3 Sean Dwyer 116567961 CMSC320 Final Project<a class="anchor-link" href="#H3-Sean-Dwyer-116567961-CMSC320-Final-Project">&#182;</a></h3><p><img src="slippi.png" alt="slippi.gg logo"></p>
 <p>Super Smash Bros. Melee is a 2001 platform fighter developed by HAL Laboratory and published by Nintendo for the GameCube. Despite the release of 3 more Smash Bros. games in the series since the release of Melee, the game's competitive scene has thrived entirely off of grassroots organization. Players have been able to play eachother online using the Dolphin emulator and a 'legally acquired' copy of the game. In 2020, a developer named Fizzi released a modification of the typical Doplhin emulator which introduced Rollback netcode to the online Melee experience. This branch of Dolphin was titled Slippi. One feature of Slippi was the introduction of Replays, which you can use in the Slippi Launcher to rewatch and review previous games. Since Slippi's release, other developers have released tools to take advantage of the tools offered by Slippi. One such tool, py-slippi, allows us to interface with the Slippi replay files extremely in-depth. Using py-slippi i will go through my entire replay folder (replays since the release of slippi, mid 2020) and analyze my own gameplay. I main Fox.
 Information about py-slippi and documentation can be found at: <a href="https://py-slippi.readthedocs.io/en/latest/index.html">https://py-slippi.readthedocs.io/en/latest/index.html</a></p>
 
@@ -14285,8 +14285,7 @@ Information about py-slippi and documentation can be found at: <a href="https://
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Data Wrangling
-To get data from my replays, I have to go through each game individually and try to formulate ways to pick out specific info from the frame data and metadata given.
+<h2 id="H2-Data-Wrangling">H2 Data Wrangling<a class="anchor-link" href="#H2-Data-Wrangling">&#182;</a></h2><p>To get data from my replays, I have to go through each game individually and try to formulate ways to pick out specific info from the frame data and metadata given.
 The method I chose to go with entailed going frame by frame through each replay and checking my Action State, which tells me which move I am currently doing. For each replay, I noted the opponent, the opponents character, how many times I used each move, how many times each move hit my opponent, the stage played, and other stats such as L-cancel percentage (explained later).</p>
 
 </div>
@@ -14392,7 +14391,7 @@ The method I chose to go with entailed going frame by frame through each replay 
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>I am leaving the output for this block clear, since I had it print the name of every .slp file analyzed for debugging purposes.</p>
+<p><em>I am leaving the output for this block clear, since I had it print the name of every .slp file analyzed for debugging purposes.</em></p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15173,8 +15172,7 @@ The method I chose to go with entailed going frame by frame through each replay 
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Data Visualization and Analysis
-I will first make another dataframe where my averages for moves/winrate against every unique opponent is binned together, so, for specific analyses, players that I played against repeatedly wont be over-weighted.</p>
+<h1 id="H2-Data-Visualization-and-Analysis">H2 Data Visualization and Analysis<a class="anchor-link" href="#H2-Data-Visualization-and-Analysis">&#182;</a></h1><p>I will first make another dataframe where my averages for moves/winrate against every unique opponent is binned together, so, for specific analyses, players that I played against repeatedly wont be over-weighted.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15594,7 +15592,7 @@ I will first make another dataframe where my averages for moves/winrate against 
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In this chart, I used a scatter plot to chart how many matches I and the opponent played against eachother over the winrate versus that opponent. I dropped outliers like my two friends who I have over 60 games played against and "one-and-done" games where either I or the opponent left after a singular game. I also dropped opponents who I either beat or lost to 100% of the time</p>
+<p>In this chart, I used a scatter plot to chart how many matches I and the opponent played against eachother over the winrate versus that opponent. I dropped outliers like my two friends who I have over 60 games played against and "one-and-done" games where either I or the opponent left after a singular game. I also dropped opponents who I either beat or lost to 100% of the time since there is high variance among whether I/my opponent stay in that scenario. As you can see, for opponents where we traded games, a fourth degree polynomial function fits the data relatively well.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15657,7 +15655,8 @@ I will first make another dataframe where my averages for moves/winrate against 
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In this bar chart, we can see the percent of Neutral Airs I threw out that ended up hitting the opponent. For fox, Neutral Air (nair) is one of the most common neutral openers.</p>
+<p>In this bar chart, we can see the percent of Neutral Airs I threw out that ended up hitting the opponent. For fox, Neutral Air (nair) is one of the most common neutral openers. So much so that it can be the downfall of many a fox who are unable to mix-up their approaches:
+!(nairplane)[nairplane.mp4]</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -16648,8 +16647,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Conclusion
-Using the tools made by various community memebers, interfacing with data from my replays is quite simple. I was hoping to be able to get more information about usage of special moves, such as Fox's Shine, which is another extremely common neutral opener. Unfourtanately, the way shine and other special moves are implemented in Melee varies from the way the normal attacks are implemented. Perhaps with more work in the future, I can make a standalone program for people to feed all their replays into for in-depth analysis.
+<h2 id="H2-Conclusion">H2 Conclusion<a class="anchor-link" href="#H2-Conclusion">&#182;</a></h2><p>Using the tools made by various community memebers, interfacing with data from my replays is quite simple. I was hoping to be able to get more information about usage of special moves, such as Fox's Shine, which is another extremely common neutral opener. Unfourtanately, the way shine and other special moves are implemented in Melee varies from the way the normal attacks are implemented. Perhaps with more work in the future, I can make a standalone program for people to feed all their replays into for in-depth analysis.
 Having data on which stages I am best at in specific matches is extremely useful for future tournament play. Not only can I use to to counter-pick in sets, but I can use this analysis to influence how I practice moving forward (against which chars and on which stages).</p>
 
 </div>
